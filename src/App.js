@@ -32,7 +32,7 @@ function App() {
     <div className='coin-app'>
       <div className='coin-search'>
         <h1 className='coin-text'>Search a currency</h1>
-        <form>
+        <form className='coin-text2'>
           <input
             className='coin-input'
             type='text'
@@ -42,10 +42,6 @@ function App() {
         </form>
         
       </div>
-      <div className="header">Name &emsp;&emsp; &emsp;   
-      Symbol &emsp;&emsp;&emsp;&emsp; 
-      Price &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
-      MKT CAP</div>
     
       {filteredCoins.map(coin => {
         return (

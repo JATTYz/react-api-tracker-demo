@@ -1,6 +1,7 @@
 .coin-container {
     display: flex;
     justify-content: center;
+     
   }
   
   .coin-row {
@@ -65,4 +66,8 @@
   
   .green {
     color: #11d811;
+  }
+
+  .ccc{
+    width: fit-content;
   }

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap");
 
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,23 +9,25 @@
   font-family: 'Bangers', sans-serif;
   background-color: rgb(33, 7, 73);
   color: #fff;
-  font-size: 25px;
+  font-size: 10px;
 }
 
 .coin-app {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   margin-top: 64px;
   color: #fff;
+  width: fit-content;
 }
 
 .coin-search {
   margin-bottom: 64px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  width: fit-content;
+
 }
 
 .coin-text {
@@ -31,6 +35,10 @@
   text-align: center;
   font-size: 50px;
   color: #d8e616;
+}
+.coin-text2 {
+  text-align: center;
+  font-size: 20px;
 }
 
 .coin-input {
@@ -55,7 +63,18 @@
 
 .header{
   
-  width:800px;
+  width:100%;
   color: rgb(248, 227, 110);
   
 }
+
+.aaa{
+  color: red;
+  font-size: 30px;
+  width: 100%;
+}
+
+
+
+
+
