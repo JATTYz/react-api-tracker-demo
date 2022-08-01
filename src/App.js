@@ -70,7 +70,7 @@ function App() {
         );
       })}
     </div>
-    <Row>
+    <Row className='fixed-bottom'>
       <Col className='col-12 text-center mt-5 footer-text'>Created by <br/>Jaturon Tepjuk</Col>
       <Col className='col-12 text-center'> <a href="https://github.com/JATTYz" target="blank"><i class="bi bi-github"></i></a>  &nbsp; <a href="https://www.linkedin.com/in/jaturon-tepjuk-310b94205/" target="blank"><i class="bi bi-linkedin"></i></a></Col>
     </Row>
