@@ -1,6 +1,11 @@
 import React from 'react';
 import './Coin.css';
-import { Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+
+
+const style = {
+  width: 60
+}
 
 const Coin = ({
   name,
@@ -11,30 +16,26 @@ const Coin = ({
   priceChange
 }) => {
   return (
-    <Container fluid>
-      <div className='coin-row'>
-
-        <div className='coin'>
-          <img src={image} alt='crypto' />
-          <h1>{name}</h1>
-          <p className='coin-symbol'>{symbol}</p>
-        </div>
-
-        <div className='coin-data'>
-          <p className='coin-price'>${price.toLocaleString()}</p>
-          
+       <Row className="mt-4" > 
+         <Col className="col-lg col-md col-sm-12 col-12">
+          <img className='' src={image} alt='crypto' style={style} />
+         </Col>
+         <Col className='col-lg col-md col-sm-12 col-12 align-self-center '><h1 className='text-name'>{name}</h1></Col>
+         <Col className='col-lg col-md col-sm-12 col-12 align-self-center'><p>{symbol}</p></Col> 
+         <Col className='col-lg col-md col-sm-12 col-12 align-self-center'><p className=''>${price.toLocaleString()}</p></Col>    
+         <Col className='col-lg col-md col-sm-12 col-12 align-self-center'>
           {priceChange < 0 ? (
-            <p className='coin-percent red'>{priceChange.toFixed(2)}%</p>
+            <p className='red'>{priceChange.toFixed(2)}%</p>
           ) : (
-            <p className='coin-percent green'>{priceChange.toFixed(2)}%</p>
+            <p className='green'>{priceChange.toFixed(2)}%</p>
           )}
-
-          <p className='coin-marketcap'>
+         </Col>    
+         <Col className='col-lg col-md col-sm-12 col-12 align-self-center'>
+          <p className=''>
             ${marketcap.toLocaleString()}
           </p>
-        </div>
-      </div>
-    </Container>
+         </Col>  
+          </Row>
   );
 };
 

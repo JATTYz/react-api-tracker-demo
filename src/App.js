@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Coin from './Coin';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -29,10 +30,11 @@ function App() {
   );
 
   return (
-    <div className='coin-app'>
-      <div className='coin-search'>
-        <h1 className='coin-text'>Search a currency</h1>
-        <form className='coin-text2'>
+    <Container >
+    <div className='text-center'>
+      <div className=''>
+        <h1 className='mt-4 coin-text'>Search a currency</h1>
+        <form className='m-3'>
           <input
             className='coin-input'
             type='text'
@@ -42,7 +44,17 @@ function App() {
         </form>
         
       </div>
-    
+      
+      <Row className='mt-4 d-none d-sm-none d-md-flex'>
+        <Col></Col>
+        <Col className='text-secondary hidden-sm'>Name</Col>
+        <Col className='text-secondary'>Symbol</Col>
+        <Col className='text-secondary'>Price</Col>
+        <Col className='text-secondary'>24h Change</Col>
+        <Col className='text-secondary'>Volumn</Col>
+        </Row> 
+       
+
       {filteredCoins.map(coin => {
         return (
           <Coin
@@ -58,7 +70,11 @@ function App() {
         );
       })}
     </div>
-    
+    <Row>
+      <Col className='col-12 text-center mt-5 footer-text'>Created by <br/>Jaturon Tepjuk</Col>
+      <Col className='col-12 text-center'> <a href="https://github.com/JATTYz" target="blank"><i class="bi bi-github"></i></a>  &nbsp; <a href="https://www.linkedin.com/in/jaturon-tepjuk-310b94205/" target="blank"><i class="bi bi-linkedin"></i></a></Col>
+    </Row>
+    </Container> 
   );
 }
 
